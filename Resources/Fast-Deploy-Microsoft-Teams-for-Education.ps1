@@ -74,7 +74,7 @@ $UsageLocation = Import-Excel -Path $WorkbookPath -WorksheetName 'School Details
 
 # if pattern is not found just set to US
 if([string]::IsNullOrEmpty($UsageLocation)){
-    $UsageLocation = 'US'
+    $UsageLocation = 'BE'
 }
 Write-Host "$UsageLocation" -ForegroundColor Green
 
@@ -108,7 +108,7 @@ For a complete list go to - https://www.iso.org/obp/ui/#search
         [string]$Role,
     
         [parameter(Mandatory = $false)]
-        [String]$UsageLocation = 'US'
+        [String]$UsageLocation = 'BE'
     )
 
     $Sku = @{
